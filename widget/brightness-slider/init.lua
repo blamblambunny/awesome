@@ -32,7 +32,7 @@ local action_level = wibox.widget {
 local slider = wibox.widget {
 	nil,
 	{
-		id 					= 'brightness_slider',
+		id 			= 'brightness_slider',
 		bar_shape           = gears.shape.rounded_rect,
 		bar_height          = dpi(2),
 		bar_color           = '#ffffff20',
@@ -42,7 +42,7 @@ local slider = wibox.widget {
 		handle_width        = dpi(15),
 		handle_border_color = '#00000012',
 		handle_border_width = dpi(1),
-		maximum				= 100,
+		maximum			= 100,
 		widget              = wibox.widget.slider,
 	},
 	nil,

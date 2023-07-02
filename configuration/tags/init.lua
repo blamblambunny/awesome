@@ -16,13 +16,16 @@ local tags = {
 		icon = icons.web_browser,
 		default_app = apps.default.web_browser,
 		gap = beautiful.useless_gap,
+		border_width = 1,
+		border_color = '#333333',
 		layout = awful.layout.suit.floating
 	},
 	{
-		type = 'code',
-		icon = icons.text_editor,
-		default_app = apps.default.text_editor,
-		gap = beautiful.useless_gap
+		type = 'development',
+		icon = icons.qgis,
+		default_app = apps.default.development,
+		gap = beautiful.useless_gap,
+		layout = awful.layout.suit.floating
 	},
 	{
 		type = 'files',
@@ -35,7 +38,6 @@ local tags = {
 		type = 'multimedia',
 		icon = icons.multimedia,
 		default_app = apps.default.multimedia,
-		gap = beautiful.useless_gap,
 		layout = awful.layout.suit.floating,
 		gap = 0
 	},
@@ -49,20 +51,13 @@ local tags = {
 	{
 		type = 'graphics',
 		icon = icons.graphics,
-		default_app = apps.default.graphics,
-		gap = beautiful.useless_gap
-	},
-	{
-		type = 'sandbox',
-		icon = icons.sandbox,
-		default_app = apps.default.sandbox,
-		layout = awful.layout.suit.max,
-		gap = 0
+		default_app = apps.default.graphics_editor,
+		gap = beautiful.useless_gap,
+		layout = awful.layout.suit.floating
 	},
 	{
 		type = 'any',
 		icon = icons.development,
-		default_app = apps.default.development,
 		gap = beautiful.useless_gap,
 		layout = awful.layout.suit.floating
 	}

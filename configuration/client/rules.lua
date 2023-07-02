@@ -151,10 +151,8 @@ ruled.client.connect_signal(
 			rule_any = {
 				class = {
 					'firefox',
-					'Tor Browser',
+					'firefox-bin',
 					'discord',
-					'Chromium',
-					'Google-chrome',
 					'TelegramDesktop'
 				}
 			},
@@ -163,25 +161,24 @@ ruled.client.connect_signal(
 			}
 		}
 
-		-- Text editors and word processing
-		ruled.client.append_rule {
-			id = 'text',
-			rule_any = {
-				class = {
-					'Geany',
-					'Atom',
-					'Subl3',
-					'code-oss'
-				},
-				name  = {
-					'LibreOffice',
-					'libreoffice'
-				}
-			},
-			properties = {
-				tag = '3'
-			}
-		}
+                -- IDEs and Tools
+                ruled.client.append_rule {
+                        id = 'development',
+                        rule_any = {
+                                class = {
+                                        'Qgis',
+					'grass',
+                                        'FreeCAD',
+                                        'OpenSCAD',
+					'LibreCAD',
+                                        'jetbrains-studio'
+                                }
+                        },
+                        properties = {
+                                tag = '3',
+                                skip_decoration = true
+                        }
+                }
 
 		-- File managers
 		ruled.client.append_rule {
@@ -218,11 +215,13 @@ ruled.client.connect_signal(
 
 		-- Gaming
 		ruled.client.append_rule {
-			id = 'gaming',
+			id = 'games',
 			rule_any = {
 				class = {
-					'Wine',
 					'dolphin-emu',
+					'kerbal-space-program',
+					'rimworld',
+					'factorio',
 					'Steam',
 					'Citra',
 					'supertuxkart'
@@ -237,71 +236,18 @@ ruled.client.connect_signal(
 			}
 		}
 
-		-- Multimedia Editing
 		ruled.client.append_rule {
-			id = 'graphics',
+			id = 'graphics_editor',
 			rule_any = {
 				class = {
-					'Gimp-2.10',
-					'Inkscape',
-					'Flowblade'
+					'darkroom',
+					'inkscape'
 				}
 			},
 			properties = {
-				tag = '7'
-			}
-		}
-
-		-- Sandboxes and VMs
-		ruled.client.append_rule {
-			id = 'sandbox',
-			rule_any = {
-				class = {
-					'VirtualBox Manage',
-					'VirtualBox Machine',
-					'Gnome-boxes',
-					'Virt-manager'
-				}
-			},
-			properties = {
-				tag = '8'
-			}
-		}
-
-		-- IDEs and Tools
-		ruled.client.append_rule {
-			id = 'development',
-			rule_any = {
-				class = {
-					'Oomox',
-					'Unity',
-					'UnityHub',
-					'jetbrains-studio',
-					'Ettercap',
-					'scrcpy'
-				}
-			},
-			properties = {
-				tag = '9',
-				skip_decoration = true
-			}
-		}
-
-		-- Image viewers
-		ruled.client.append_rule {
-			id        = 'image_viewers',
-			rule_any  = {
-				class    = {
-					'feh',
-					'Pqiv',
-					'Sxiv'
-				},
-			},
-			properties = {
-				titlebars_enabled = true,
+				tag = '7',
 				skip_decoration = true,
-				floating = true,
-				ontop = true,
+				switch_to_tags = true,
 				placement = awful.placement.centered
 			}
 		}

@@ -5,31 +5,18 @@ local utils_dir = config_dir .. 'utilities/'
 return {
 	-- The default applications that we will use in keybindings and widgets
 	default = {
-		-- Default terminal emulator
 		terminal = 'kitty',
-		-- Default web browser
 		web_browser = 'firefox-bin',
-		-- Default text editor
-		text_editor = 'subl3',
-		-- Default file manager
 		file_manager = 'dolphin',
-		-- Default media player
 		multimedia = 'vlc',
-		-- Default game, can be a launcher like steam
-		game = 'supertuxkart',
-		-- Default graphics editor
-		graphics = 'gimp-2.10',
-		-- Default sandbox
+		game = 'kerbal-space-program',
+		graphics_editor = "datktable",
 		sandbox = 'virtualbox',
 		-- Default IDE
-		development = '',
-		-- Default network manager
+		development = 'qgis',
 		network_manager = 'wpa_gui',
-		-- Default bluetooth manager
 		bluetooth_manager = 'blueman-manager',
-		-- Default power manager
 		power_manager = 'xfce4-power-manager',
-		-- Default GUI package manager
 		package_manager = 'pamac-manager',
 		-- Default locker
 		lock = 'awesome-client "awesome.emit_signal(\'module::lockscreen_show\')"',
@@ -51,14 +38,9 @@ return {
 
 	-- List of apps to start once on start-up
 	run_on_start_up = {
-		-- Compositor
-		'picom -b --experimental-backends --dbus --config ' .. config_dir .. '/configuration/picom.conf',
-		-- Pulseaudio
+		--'picom -b --experimental-backends --dbus --config ' .. config_dir .. '/configuration/picom.conf',
 		'pulseaudio --start',
-		-- Blueman applet
 		'blueman-applet',
-		-- Music server
-		'mpd',
 		-- Polkit and keyring
 		'/usr/bin/lxqt-policykit-agent &' ..
 		' eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg)',
@@ -70,9 +52,9 @@ return {
 		[[
 		xidlehook --not-when-fullscreen --not-when-audio --timer 600 \
 		"awesome-client 'awesome.emit_signal(\"module::lockscreen_show\")'" ""
-		]]
+		]],
 
-		-- You can add more start-up applications here
+		'synclient HorizTwoFingerScroll=1 MaxSpeed=1.45 TapButton1=1'
 	},
 
 	-- List of binaries/shell scripts that will execute for a certain task

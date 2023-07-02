@@ -52,8 +52,8 @@ return wibox.widget {
 			{
 				{
 					layout = wibox.layout.fixed.vertical,
-					require('widget.blur-slider'),
-					require('widget.blur-toggle')
+--					require('widget.blur-slider'),
+--					require('widget.blur-toggle')
 				},
 				bg = beautiful.groups_bg,
 				shape = function(cr, width, height)
