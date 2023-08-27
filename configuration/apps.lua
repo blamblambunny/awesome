@@ -39,6 +39,7 @@ return {
 	-- List of apps to start once on start-up
 	run_on_start_up = {
 		--'picom -b --experimental-backends --dbus --config ' .. config_dir .. '/configuration/picom.conf',
+		'xiccd',
 		'pulseaudio --start',
 		'blueman-applet',
 		-- Polkit and keyring

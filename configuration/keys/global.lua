@@ -392,9 +392,14 @@ local global_keys = awful.util.table.join(
 		{modkey}, 
 		'Return',
 		function()
-			awful.spawn(apps.default.terminal)
+			awful.spawn(
+				awful.screen.focused().selected_tag.default_app,
+				{
+					tag = mouse.screen.selected_tag
+				}
+			)
 		end,
-		{description = 'open default terminal', group = 'launcher'}
+		{description = 'open default app for tag', group = 'launcher'}
 	),
 	awful.key(
 		{modkey, 'Shift'}, 
