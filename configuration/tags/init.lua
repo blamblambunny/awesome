@@ -21,16 +21,16 @@ local tags = {
 		layout = awful.layout.suit.floating
 	},
 	{
-		type = 'development',
-		icon = icons.qgis,
-		default_app = apps.default.development,
+		type = 'gis',
+		icon = icons.gis,
+		default_app = apps.default.gis,
 		gap = beautiful.useless_gap,
 		layout = awful.layout.suit.floating
 	},
 	{
-		type = 'files',
-		icon = icons.file_manager,
-		default_app = apps.default.file_manager,
+		type = 'cad',
+		icon = icons.cad,
+		default_app = apps.default.cad_editor,
 		gap = beautiful.useless_gap,
 		layout = awful.layout.suit.tile
 	},

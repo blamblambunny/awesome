@@ -38,8 +38,11 @@ local top_panel = function(s)
 
 	local add_button 		= require('widget.open-default-app')(s)
 	local clock 			= require('widget.clock')(s)
+	s.battery                       = require('widget.battery')()
+	s.bluetooth                     = require('widget.bluetooth')()
+	s.network                       = require('widget.network')()
+	local layout_box                = require('widget.layoutbox')(s)
 	s.end_session			= require('widget.end-session')()
-	s.global_search			= require('widget.global-search')()
 
 	panel : setup {
 		layout = wibox.layout.align.horizontal,
@@ -54,10 +57,13 @@ local top_panel = function(s)
 		},
 		{
 			layout = wibox.layout.fixed.horizontal,
-			spacing = dpi(5),
+			spacing = dpi(3),
 			expand = "none",
+			s.network,
+			s.bluetooth,
+			s.battery,
 			clock,
-			s.global_search,
+			layout_box,
 			s.end_session
 		}
 	}

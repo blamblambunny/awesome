@@ -8,6 +8,7 @@ return {
 		terminal = 'kitty',
 		web_browser = 'firefox-bin',
 		file_manager = 'dolphin',
+		cad_editor = 'librecad',
 		multimedia = 'vlc',
 		game = 'kerbal-space-program',
 		graphics_editor = "datktable",

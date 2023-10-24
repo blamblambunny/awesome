@@ -26,7 +26,6 @@ end
 
 local bottom_panel = function(s)
 
-
 	s.systray = wibox.widget {
 		{
 			base_size = dpi(20),
@@ -42,9 +41,6 @@ local bottom_panel = function(s)
 	s.search = require('widget.search-apps')()
 	s.tray_toggler  		= build_widget(require('widget.tray-toggle'))
 	s.bluetooth   			= build_widget(require('widget.bluetooth')())
-	s.network       		= build_widget(require('widget.network')())
-	s.battery     			= build_widget(require('widget.battery')())
-	local layout_box 		= build_widget(require('widget.layoutbox')(s))
 	
 	local separator =  wibox.widget {
 		orientation = 'vertical',
@@ -69,14 +65,8 @@ local bottom_panel = function(s)
 					layout = wibox.layout.fixed.horizontal,
 					spacing = dpi(10),
 					s.systray,
-					s.tray_toggler,
-					s.network,
-					s.bluetooth,
-					s.battery,
-					layout_box,
-					separator
+					s.tray_toggler
 				},
-				require('widget.xdg-folders.trash')(),
 			},
 			bg = beautiful.background,
 			shape = function(cr, w, h)

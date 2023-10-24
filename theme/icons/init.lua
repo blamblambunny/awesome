@@ -15,7 +15,8 @@ return {
 	sandbox 			= dir .. 'tag-list/' .. 'sandbox.svg',
 	terminal 			= dir .. 'tag-list/' .. 'terminal.svg',
 	graphics 			= dir .. 'tag-list/' .. 'graphics.svg',
-	qgis				= dir .. 'tag-list/' .. 'qgis.svg',
+	gis				= dir .. 'tag-list/' .. 'qgis.svg',
+	cad				= dir .. 'tag-list/' .. 'librecad.svg',
 	menu 				= dir .. 'tag-list/' .. 'menu.svg',
 
 	-- Others/System UI

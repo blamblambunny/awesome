@@ -153,7 +153,8 @@ ruled.client.connect_signal(
 					'firefox',
 					'firefox-bin',
 					'discord',
-					'TelegramDesktop'
+					'TelegramDesktop',
+					'thunderbird-bin'
 				}
 			},
 			properties = {
@@ -161,17 +162,13 @@ ruled.client.connect_signal(
 			}
 		}
 
-                -- IDEs and Tools
+                -- GIS
                 ruled.client.append_rule {
-                        id = 'development',
+                        id = 'gis',
                         rule_any = {
                                 class = {
                                         'Qgis',
-					'grass',
-                                        'FreeCAD',
-                                        'OpenSCAD',
-					'LibreCAD',
-                                        'jetbrains-studio'
+					'grass'
                                 }
                         },
                         properties = {
@@ -180,20 +177,19 @@ ruled.client.connect_signal(
                         }
                 }
 
-		-- File managers
+		-- CAD
 		ruled.client.append_rule {
-			id = 'files',
+			id = 'cad',
 			rule_any = {
 				class = {
-					'dolphin',
-					'ark',
-					'Nemo',
-					'File-roller'
+					'FreeCAD',
+					'OpenSCAD',
+					'LibreCAD'
 				}
 			},
 			properties = {
 				tag = '4',
-				switch_to_tags = true
+				skip_decoration = true
 			}
 		}
 
