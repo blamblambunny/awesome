@@ -38,9 +38,7 @@ local bottom_panel = function(s)
 		widget = wibox.container.margin
 	}
 
-	s.search = require('widget.search-apps')()
 	s.tray_toggler  		= build_widget(require('widget.tray-toggle'))
-	s.bluetooth   			= build_widget(require('widget.bluetooth')())
 	
 	local separator =  wibox.widget {
 		orientation = 'vertical',
@@ -57,10 +55,8 @@ local bottom_panel = function(s)
 		widget = {
 			{
 				layout = wibox.layout.fixed.horizontal,
-				s.search,
 				separator,
 				tag_list(s),
-				require('widget.xdg-folders')(),
 				{
 					layout = wibox.layout.fixed.horizontal,
 					spacing = dpi(10),

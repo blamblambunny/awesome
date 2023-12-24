@@ -220,7 +220,8 @@ ruled.client.connect_signal(
 					'factorio',
 					'Steam',
 					'Citra',
-					'supertuxkart'
+					'supertuxkart',
+					'higan'
 				},
 				name = {'Steam'}
 			},
